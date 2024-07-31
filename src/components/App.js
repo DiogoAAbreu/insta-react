@@ -1,6 +1,8 @@
-import Container from "./Container";
+import Navbar from "./Navbar";
 function App() {
-  return (<Container />)
+  return (
+    <Navbar />
+  )
 }
 
 export default App;
