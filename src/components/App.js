@@ -1,7 +1,12 @@
 import Navbar from "./Navbar";
+import Corpo from "./Corpo";
+
 function App() {
   return (
-    <Navbar />
+    <div className="app">
+      <Navbar />
+      <Corpo />
+    </div>
   )
 }
 
