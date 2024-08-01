@@ -33,6 +33,10 @@ const usuariosStories =
             usuario: "respondeai"
         },
         {
+            img: "assets/img/filomoderna.svg",
+            usuario: "filomoderna"
+        },
+        {
             img: "assets/img/memeriagourmet.svg",
             usuario: "memeriagourmet"
         },
