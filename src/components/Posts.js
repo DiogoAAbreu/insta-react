@@ -3,18 +3,35 @@ import React from 'react';
 export default function Posts() {
     return (
         <div className="posts">
-            <div className="post">
-                <Topo imgTopo="assets/img/meowed.svg" usuario="meowed" />
-                <Conteudo imgConteudo="assets/img/gato-telefone.svg" />
-                <Fundo imgCurtiu="assets/img/respondeai.svg" usuario="respondeai" />
-            </div>
+            {postInfo.map(info => <Story imgTopo={info.imgTopo} usuario={info.usuario} conteudo={info.conteudo} imgCurtiu={info.imgCurtiu} usuarioCurtiu={info.usuarioCurtiu} />)}
+        </div>
+    )
+}
 
-            <div className="post">
-                <Topo imgTopo="assets/img/barked.svg" usuario="barked" />
-                <Conteudo imgConteudo="assets/img/dog.svg" />
-                <Fundo imgCurtiu="assets/img/adorable_animals.svg" usuario="adorable_animals" />
-            </div>
+const postInfo =
+    [
+        {
+            imgTopo: "assets/img/meowed.svg",
+            usuario: "meowed",
+            conteudo: "assets/img/gato-telefone.svg",
+            imgCurtiu: "assets/img/respondeai.svg",
+            usuarioCurtiu: "respondeai"
+        },
+        {
+            imgTopo: "assets/img/barked.svg",
+            usuario: "barked",
+            conteudo: "assets/img/dog.svg",
+            imgCurtiu: "assets/img/adorable_animals.svg",
+            usuarioCurtiu: "adorable_animals"
+        }
+    ]
 
+function Story(props) {
+    return (
+        <div className='post'>
+            <Topo imgTopo={props.imgTopo} usuario={props.usuario} />
+            <Conteudo conteudo={props.conteudo} />
+            <Fundo imgCurtiu={props.imgCurtiu} usuarioCurtiu={props.usuarioCurtiu} />
         </div>
     )
 }
@@ -37,7 +54,7 @@ function Topo(props) {
 function Conteudo(props) {
     return (
         <div className="conteudo">
-            <img src={props.imgConteudo} />
+            <img src={props.conteudo} />
         </div>
     )
 }

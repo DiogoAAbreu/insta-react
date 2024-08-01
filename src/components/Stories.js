@@ -1,17 +1,43 @@
 export default function Stories() {
     return (
         <div className="stories">
-            <Story img="assets/img/9gag.svg" usuario="9gag" />
-            <Story img="assets/img/meowed.svg" usuario="meowed" />
-            <Story img="assets/img/barked.svg" usuario="barked" />
-            <Story img="assets/img/nathanwpylestrangeplanet.svg" usuario="nathanwpylestrangeplanet" />
-            <Story img="assets/img/wawawicomics.svg" usuario="wawawicomics" />
-            <Story img="assets/img/respondeai.svg" usuario="respondeai" />
-            <Story img="assets/img/filomoderna.svg" usuario="filomoderna" />
-            <Story img="assets/img/memeriagourmet.svg" usuario="memeriagourmet" />
+            {usuariosStories.map(usuario => <Story img={usuario.img} usuario={usuario.usuario} />)}
             <Setinha />
         </div>)
 }
+
+const usuariosStories =
+    [
+        {
+            img: "assets/img/9gag.svg",
+            usuario: "9gag"
+        },
+        {
+            img: "assets/img/meowed.svg",
+            usuario: "meowed"
+        },
+        {
+            img: "assets/img/barked.svg",
+            usuario: "barked"
+        },
+        {
+            img: "assets/img/nathanwpylestrangeplanet.svg",
+            usuario: "nathanwpylestrangeplanet"
+        },
+        {
+            img: "assets/img/wawawicomics.svg",
+            usuario: "wawawicomics"
+        },
+        {
+            img: "assets/img/respondeai.svg",
+            usuario: "respondeai"
+        },
+        {
+            img: "assets/img/memeriagourmet.svg",
+            usuario: "memeriagourmet"
+        },
+
+    ]
 
 function Story(props) {
     return (
