@@ -406,6 +406,10 @@ ion-icon[name="heart"] {
     position: relative;
     top: 4px;
   }
+
+  .setinha {
+    display: none;
+  }
 }
 
 ion-icon {
